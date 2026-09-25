@@ -13,7 +13,6 @@ A personal repository for hands-on Machine Learning practice, regression, classi
 - **Components:**
   - Jupyter Notebook: [`house-price-prediction/california_housing_prediction.ipynb`](./house-price-prediction/california_housing_prediction.ipynb)
   - Streamlit Web App: [`house-price-prediction/app.py`](./house-price-prediction/app.py)
-  - Trained Model Artifact: [`house-price-prediction/model_harga_rumah.sav`](./house-price-prediction/model_harga_rumah.sav)
 
 ---
 
