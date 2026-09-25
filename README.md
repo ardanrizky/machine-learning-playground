@@ -13,26 +13,7 @@ A personal repository for hands-on Machine Learning practice, regression, classi
 - **Components:**
   - Jupyter Notebook: [`house-price-prediction/california_housing_prediction.ipynb`](./house-price-prediction/california_housing_prediction.ipynb)
   - Streamlit Web App: [`house-price-prediction/app.py`](./house-price-prediction/app.py)
-
----
-
-## Quick Start
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Run the Streamlit Web Application
-```bash
-cd house-price-prediction
-streamlit run app.py
-```
-
-### 3. Open the Research Notebook
-```bash
-jupyter notebook house-price-prediction/california_housing_prediction.ipynb
-```
+  - Public Dataset: [California Housing Prices (Kaggle)](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
 
 ---
 
