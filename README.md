@@ -10,17 +10,29 @@ A personal repository for hands-on Machine Learning practice, regression, classi
 - **Description:** Predicting median house values using the California Housing dataset.
 - **Algorithm:** XGBoost Regressor
 - **Key Techniques:** Exploratory Data Analysis, Correlation Heatmap, Feature Importance, R² & MAE Evaluation.
-- **Notebook:** [`house-price-prediction/california_housing_prediction.ipynb`](./house-price-prediction/california_housing_prediction.ipynb)
+- **Components:**
+  - Jupyter Notebook: [`house-price-prediction/california_housing_prediction.ipynb`](./house-price-prediction/california_housing_prediction.ipynb)
+  - Streamlit Web App: [`house-price-prediction/app.py`](./house-price-prediction/app.py)
+  - Trained Model Artifact: [`house-price-prediction/model_harga_rumah.sav`](./house-price-prediction/model_harga_rumah.sav)
 
 ---
 
 ## Quick Start
 
+### 1. Install Dependencies
 ```bash
-git clone https://github.com/ardanrizky/machine-learning-playground.git
-cd machine-learning-playground
 pip install -r requirements.txt
-jupyter notebook
+```
+
+### 2. Run the Streamlit Web Application
+```bash
+cd house-price-prediction
+streamlit run app.py
+```
+
+### 3. Open the Research Notebook
+```bash
+jupyter notebook house-price-prediction/california_housing_prediction.ipynb
 ```
 
 ---
