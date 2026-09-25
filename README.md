@@ -1,6 +1,6 @@
 # Machine Learning Playground
 
-A personal repository for hands-on Machine Learning practice, regression, classification, and exploratory data analysis.
+A personal repository dedicated to hands-on Machine Learning experiments, end-to-end data projects, and interactive applications.
 
 ---
 
