@@ -33,7 +33,7 @@ def get_model():
 model, feature_names = get_model()
 
 # Header Aplikasi
-st.title("Prediksi Kelayakan Pinjaman Bank (Loan Approval)")
+st.title("Prediksi Pinjaman Bank")
 st.write("Masukkan profil nasabah untuk memprediksi apakah pengajuan kredit disetujui atau ditolak:")
 
 # Form Input Data Nasabah
@@ -43,26 +43,26 @@ with col1:
     gender = st.selectbox("Jenis Kelamin", ["Laki-laki", "Perempuan"])
     married = st.selectbox("Status Pernikahan", ["Sudah Menikah", "Lajang"])
     dependents = st.selectbox("Jumlah Tanggungan", ["0", "1", "2", "3+"])
-    education = st.selectbox("Pendidikan Terakhir", ["Sarjana (Graduate)", "Non-Sarjana (Not Graduate)"])
-    self_employed = st.selectbox("Status Pekerjaan", ["Karyawan / Profesional", "Wirausaha (Self Employed)"])
+    education = st.selectbox("Pendidikan Terakhir", ["Sarjana", "Non-Sarjana"])
+    self_employed = st.selectbox("Status Pekerjaan", ["Karyawan", "Wirausaha"])
 
 with col2:
     applicant_income = st.number_input("Pendapatan Pemohon ($ / Bulan)", value=4500, step=100)
     coapplicant_income = st.number_input("Pendapatan Pasangan ($ / Bulan)", value=1500, step=100)
     loan_amount = st.number_input("Jumlah Pinjaman ($ Ribu, contoh: 120 = $120.000)", value=128, step=10)
     loan_term = st.number_input("Jangka Waktu Pinjaman (Bulan)", value=360, step=12)
-    credit_history = st.selectbox("Riwayat Kredit", ["Lancar / Memenuhi Syarat (1.0)", "Ada Tunggakan / Tidak Lolos (0.0)"])
-    property_area = st.selectbox("Lokasi Properti", ["Perkotaan (Urban)", "Pinggiran Kota (Semiurban)", "Pedesaan (Rural)"])
+    credit_history = st.selectbox("Riwayat Kredit", ["Lancar", "Ada Tunggakan"])
+    property_area = st.selectbox("Lokasi Properti", ["Perkotaan", "Pinggiran Kota", "Pedesaan"])
 
 # Konversi input ke format model
 gender_val = 1 if gender == "Laki-laki" else 0
 married_val = 1 if married == "Sudah Menikah" else 0
 dep_val = 4 if dependents == "3+" else int(dependents)
-edu_val = 1 if "Sarjana" in education else 0
-emp_val = 1 if "Wirausaha" in self_employed else 0
-cred_val = 1.0 if "1.0" in credit_history else 0.0
+edu_val = 1 if education == "Sarjana" else 0
+emp_val = 1 if self_employed == "Wirausaha" else 0
+cred_val = 1.0 if credit_history == "Lancar" else 0.0
 
-prop_map = {"Pedesaan (Rural)": 0, "Pinggiran Kota (Semiurban)": 1, "Perkotaan (Urban)": 2}
+prop_map = {"Pedesaan": 0, "Pinggiran Kota": 1, "Perkotaan": 2}
 prop_val = prop_map[property_area]
 
 # Tombol Prediksi
